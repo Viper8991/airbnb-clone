@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb Hotel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="hotel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans">
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center ">
+                    <a href="#" class="flex items-center">
+                        <i class="fa-brands fa-airbnb text-3xl text-blue-800 mr-2"></i>
+                        <span class="text-3xl font-bold text-gray-800">Airbnb</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="#home" class="text-gray-800 hover:text-yellow-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#rooms" class="text-gray-800 hover:text-yellow-600 px-3 py-2 rounded-md text-sm font-medium">Rooms</a>
+                        <a href="#amenities" class="text-gray-800 hover:text-yellow-600 px-3 py-2 rounded-md text-sm font-medium">Amenities</a>
+                        <a href="#gallery" class="text-gray-800 hover:text-yellow-600 px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
+                        <a href="#contact" class="bg-yellow-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-yellow-700 transition duration-300">Book Now</a>
+                    </div>
+                    
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-800 hover:text-yellow-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="text-gray-800 hover:text-yellow-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#rooms" class="text-gray-800 hover:text-yellow-600 block px-3 py-2 rounded-md text-base font-medium">Rooms</a>
+                <a href="#amenities" class="text-gray-800 hover:text-yellow-600 block px-3 py-2 rounded-md text-base font-medium">Amenities</a>
+                <a href="#gallery" class="text-gray-800 hover:text-yellow-600 block px-3 py-2 rounded-md text-base font-medium">Gallery</a>
+                <a href="#booking" class="bg-yellow-600 text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-yellow-700 transition duration-300">Book Now</a>
+            </div>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-300">
+                Contact Us
+            </button>
+              
+        </div>
+    </nav>
+
+    <section id="home" class="hero-image pt-16 flex items-center justify-center text-white">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 fade-in">Experience Unparalleled Luxury</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto fade-in">Discover the perfect blend of comfort and elegance at Luxury Haven Hotel</p>
+            <a href="#contact" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 inline-block fade-in">
+                Book Your Stay
+            </a>
+        </div>
+    </section>
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-yellow-600 font-semibold tracking-wide uppercase">Welcome to</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Airbnb
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Where every detail is crafted to perfection for your ultimate comfort and relaxation.
+                </p>
+            </div>
+
+            <div class="mt-20">
+                <div class="grid grid-cols-1 gap-12 md:grid-cols-3">
+                    <div class="text-center">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-100 text-yellow-600 mx-auto mb-4">
+                            <i class="fas fa-concierge-bell text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900">24/7 Concierge</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Our dedicated staff is available around the clock to cater to your every need.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-100 text-yellow-600 mx-auto mb-4">
+                            <i class="fas fa-utensils text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900">Gourmet Dining</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Experience world-class cuisine at our award-winning restaurants.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-100 text-yellow-600 mx-auto mb-4">
+                            <i class="fas fa-spa text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900">Spa & Wellness</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Rejuvenate your mind and body at our luxurious spa facilities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="rooms" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-base text-yellow-600 font-semibold tracking-wide uppercase">Accommodations</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Our Rooms & Suites
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Each space is designed to provide the perfect sanctuary during your stay.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg overflow-hidden shadow-md room-card transition duration-300">
+                    <img src="b15f257289f1d06d0e4dd4fc332de429.jpg" alt="Deluxe Room" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold text-gray-900">Deluxe Room</h3>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded">Popular</span>
+                        </div>
+                        <p class="mt-2 text-gray-600">Spacious comfort with elegant furnishings and premium amenities.</p>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600">4.5 (128 reviews)</span>
+                        </div>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-2xl font-bold text-gray-900">$19<small class="text-sm text-gray-500">/night</small></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-md room-card transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Executive Suite" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold text-gray-900">Executive Suite</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Business</span>
+                        </div>
+                        <p class="mt-2 text-gray-600">Sophisticated living space with separate work and relaxation areas.</p>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600">5.0 (86 reviews)</span>
+                        </div>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-2xl font-bold text-gray-900">$39<small class="text-sm text-gray-500">/night</small></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-md room-card transition duration-300">
+                    <img src="sea-design-lamp-sofa-wallpaper-preview.jpg" alt="Presidential Suite" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold text-gray-900">Presidential Suite</h3>
+                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Luxury</span>
+                        </div>
+                        <p class="mt-2 text-gray-600">The ultimate in luxury with panoramic views and exclusive services.</p>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600">5.0 (42 reviews)</span>
+                        </div>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-2xl font-bold text-gray-900">$39<small class="text-sm text-gray-500">/night</small></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="#rooms" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-900 transition duration-300">
+                    View All Room Types
+                    <i class="fas fa-chevron-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="amenities" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-base text-yellow-600 font-semibold tracking-wide uppercase">Facilities</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    World-Class Amenities
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Designed to enhance your stay with exceptional services and facilities.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-yellow-100 text-yellow-600 mx-auto mb-4 amenity-icon">
+                        <i class="fas fa-swimming-pool text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900">Infinity Pool</h3>
+                    <p class="mt-2 text-sm text-gray-500">
+                        Stunning rooftop pool with panoramic city views
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-yellow-100 text-yellow-600 mx-auto mb-4 amenity-icon">
+                        <i class="fas fa-dumbbell text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900">Fitness Center</h3>
+                    <p class="mt-2 text-sm text-gray-500">
+                        State-of-the-art equipment with personal trainers
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-yellow-100 text-yellow-600 mx-auto mb-4 amenity-icon">
+                        <i class="fas fa-wifi text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900">High-Speed WiFi</h3>
+                    <p class="mt-2 text-sm text-gray-500">
+                        Complimentary ultra-fast internet throughout
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-yellow-100 text-yellow-600 mx-auto mb-4 amenity-icon">
+                        <i class="fas fa-parking text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900">Valet Parking</h3>
+                    <p class="mt-2 text-sm text-gray-500">
+                        Secure parking with 24/7 valet service
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-yellow-100 text-yellow-600 mx-auto mb-4 amenity-icon">
+                        <i class="fas fa-umbrella-beach text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900">Private Beach</h3>
+                    <p class="mt-2 text-sm text-gray-500">
+                        Exclusive beach access with cabana service
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-yellow-100 text-yellow-600 mx-auto mb-4 amenity-icon">
+                        <i class="fas fa-concierge-bell text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900">24/7 Concierge</h3>
+                    <p class="mt-2 text-sm text-gray-500">
+                        Personalized assistance anytime you need
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-yellow-100 text-yellow-600 mx-auto mb-4 amenity-icon">
+                        <i class="fas fa-utensils text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900">Fine Dining</h3>
+                    <p class="mt-2 text-sm text-gray-500">
+                        Multiple award-winning restaurants on-site
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-yellow-100 text-yellow-600 mx-auto mb-4 amenity-icon">
+                        <i class="fas fa-spa text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900">Luxury Spa</h3>
+                    <p class="mt-2 text-sm text-gray-500">
+                        Holistic treatments and wellness therapies
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-base text-yellow-600 font-semibold tracking-wide uppercase">Visual Journey</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Our Gallery
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Explore the beauty and elegance of Luxury Haven through our photo collection.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Hotel Lobby" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white text-lg font-medium">Grand Lobby</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="241110-Presidential-Suite-Living-Room-693x390.jpg" alt="Deluxe Room" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white text-lg font-medium">Deluxe Room</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1100&q=80" alt="Restaurant" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white text-lg font-medium">Gourmet Restaurant</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Spa" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white text-lg font-medium">Luxury Spa</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1561501878-aabd62634533?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Pool" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white text-lg font-medium">Infinity Pool</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Event Space" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white text-lg font-medium">Event Space</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-base text-yellow-600 font-semibold tracking-wide uppercase">Guest Experiences</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    What Our Guests Say
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Don't just take our word for it - hear from our valued guests.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-8 rounded-full" src="Snapchat-1340908257.jpg" alt="Sarah Johnson">
+                        </div>
+                        <div class="ml-4">
+                            <div class="text-sm font-medium text-gray-900">Viper</div>
+                            <div class="flex text-yellow-400 mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-600 italic">
+                            "Absolutely stunning hotel with impeccable service. The attention to detail is remarkable, from the luxurious bedding to the personalized welcome note. The spa treatments were divine!"
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="Screenshot 2025-05-02 192639.png" alt="Michael Chen">
+                        </div>
+                        <div class="ml-4">
+                            <div class="text-sm font-medium text-gray-900">Zaxx</div>
+                            <div class="flex text-yellow-400 mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-600 italic">
+                            "As a frequent business traveler, I appreciate the executive floor amenities and the efficient service. The work desk in my room was perfectly set up with all the necessary connections."
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Rodriguez">
+                        </div>
+                        <div class="ml-4">
+                            <div class="text-sm font-medium text-gray-900">Emily Rodriguez</div>
+                            <div class="flex text-yellow-400 mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-600 italic">
+                            "Our anniversary stay was magical! The staff went above and beyond to make it special with rose petals, champagne, and a breathtaking room upgrade. We'll definitely be back!"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="booking" class="py-20 bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                <div class="mb-12 lg:mb-0">
+                    <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+                        Ready for an Unforgettable Stay?
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-300">
+                        Book your luxury experience today and enjoy our best available rates when you reserve directly with us.
+                    </p>
+                    <div class="mt-8">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 bg-yellow-500 rounded-full p-2">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div class="ml-3 text-base text-gray-300">
+                                Best price guarantee
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 bg-yellow-500 rounded-full p-2">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div class="ml-3 text-base text-gray-300">
+                                Free cancellation up to 48 hours
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-yellow-500 rounded-full p-2">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div class="ml-3 text-base text-gray-300">
+                                Complimentary welcome drink
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-medium text-gray-900 mb-6">Check Availability</h3>
+                        <form action="/submit" method="post">
+                            <div class="grid grid-cols-1 gap-6">
+                                <div>
+                                    <label for="check-in" class="block text-sm font-medium text-gray-700">Check-in</label>
+                                    <input type="date" id="checkin" name="checkin" class="mt-1 block w-full border text-black border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500" required>
+                                </div>
+                                <div>
+                                    <label for="check-out" class="block text-sm font-medium text-gray-700">Check-out</label>
+                                    <input type="date" id="checkout" name="checkout" class="mt-1 text-black block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500" required>
+                                </div>
+                                <div>
+                                    <label for="guests" class="block text-sm font-medium text-gray-700">Guests</label>
+                                    <select id="guests" name="guests" class="mt-1 block w-full border border-gray-300  text-black rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500" required>
+                                        <option>1 Adult</option>
+                                        <option>2 Adults</option>
+                                        <option>3 Adults</option>
+                                        <option>4 Adults</option>
+                                        <option>Family (2 Adults + 2 Children)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 transition duration-300">
+                                        Check Availability
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-base text-yellow-600 font-semibold tracking-wide uppercase">Get In Touch</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Book Our Hotel Now
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Our team is always ready to assist with your inquiries and special requests.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-4">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-yellow-600 mt-1"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-base text-gray-700">
+                                    Sweet Home HOtel<br>
+                                    Tindola, Uttar Pradesh 225003<br>
+                                    Lucknow
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-phone-alt text-yellow-600 mt-1"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-base text-gray-700">
+                                    +91 268541654XX<br>
+                                    Reservations: +91 9832 9969XX
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-envelope text-yellow-600 mt-1"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-base text-gray-700">
+                                    viper@gmail.com<br>
+                                    vikash@gmail.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="text-lg font-medium text-gray-900 mt-8 mb-4">Follow Us</h3>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-yellow-600">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-yellow-600">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-yellow-600">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-yellow-600">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-4">Book ASAP</h3>
+                    <form action="/submit" method="post">
+                        <div class="grid grid-cols-1 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"placeholder="Your Full Name" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"placeholder="Your Email " required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                                <input type="tel" id="number" name="number" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500" placeholder="Your Phone Number">
+                            </div>
+                            <div>
+                                <label for="room-type" class="block text-sm font-medium text-gray-700">Room Type</label>
+                                <select id="roomtype" name="roomtype" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none text-black focus:ring-yellow-500 focus:border-yellow-500" required>
+                                    <option>Deluxe Room</option>
+                                    <option>Executive Suite</option>
+                                    <option>Presidential Suite</option>
+                                    <option>Ocean View Room</option>
+                                    <option>Family Suite</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                                <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"  required placeholder="Enter Your Question"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 transition duration-300">
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="bg-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3556.4816770959796!2d81.0955250748964!3d26.951641758417452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39995ee81add328f%3A0xbe8acc99218572c9!2sShri%20Ramswaroop%20Memorial%20University%20(SRMU)!5e0!3m2!1sen!2sin!4v1746193798128!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Luxury Haven</h3>
+                    <p class="text-gray-400">
+                        Where luxury meets comfort in perfect harmony. Experience the pinnacle of hospitality at our world-class hotel.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-yellow-500 transition duration-300">Home</a></li>
+                        <li><a href="#rooms" class="text-gray-400 hover:text-yellow-500 transition duration-300">Rooms & Suites</a></li>
+                        <li><a href="#amenities" class="text-gray-400 hover:text-yellow-500 transition duration-300">Amenities</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-yellow-500 transition duration-300">Gallery</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-yellow-500 transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition duration-300">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition duration-300">Cancellation Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition duration-300">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">
+                        Subscribe to our newsletter for exclusive offers and updates.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-md focus:outline-none text-gray-900">
+                        <button type="submit" class="bg-yellow-600 hover:bg-yellow-700 px-4 py-2 rounded-r-md transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2025 Airbnb Hotel. All rights reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-yellow-500">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-500">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-500">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-500">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-yellow-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+       
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        const testimonialCards = document.querySelectorAll('.testimonial-card');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        testimonialCards.forEach(card => {
+            observer.observe(card);
+        });
+
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+    </script>
+</body>
+</html>
