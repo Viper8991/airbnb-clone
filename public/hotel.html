@@ -753,11 +753,14 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("FORM DATA:", formData);
 
       try {
-        const res = await fetch("http://localhost:5000/booking", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
+        const res = await fetch("https://airbnb-clone-ly0m.onrender.com/booking", {
+        method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
           body: JSON.stringify(formData)
         });
+
 
         const result = await res.json();
 
