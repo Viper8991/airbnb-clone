@@ -8,8 +8,13 @@ app.use(cors());
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("✅ MongoDB Atlas Connected"))
-  .catch(err => console.log(err));
+  .then(() => {
+    console.log("✅ MongoDB Atlas Connected");
+  })
+  .catch((err) => {
+    console.error("❌ MongoDB connection error:", err.message);
+  });
+
 
 const BookingSchema = new mongoose.Schema({
    name:String,
@@ -39,7 +44,13 @@ app.get("/", (req, res) => {
 
 
 app.get("/bookings", async (req, res) => {
-  res.json(await Booking.find());
+  try {
+    const bookings = await Booking.find();
+    res.json(bookings);
+  } catch (err) {
+    console.error("❌ Fetch bookings error:", err.message);
+    res.status(500).json({ error: "Database error" });
+  }
 });
 
 const PORT = process.env.PORT || 5000;
